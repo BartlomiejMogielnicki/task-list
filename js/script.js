@@ -43,9 +43,25 @@ const clearList = () => {
     };
 };
 
+// Filter list
+const filterList = () => {
+    const text = inputFilter.value.toLowerCase();
+
+    const items = document.querySelectorAll('.list-item');
+    items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(text)) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        };
+    });
+};
+
 // Add event listeners
 addForm.addEventListener('submit', addItem);
 
 taskList.addEventListener('click', deleteItem);
 
 clearBtn.addEventListener('click', clearList);
+
+inputFilter.addEventListener('input', filterList);
