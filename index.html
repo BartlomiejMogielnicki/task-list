@@ -16,8 +16,7 @@
             <div class="filter-container">
                 <form id="add-task-form">
                     <div class="add-task">
-                        <input type="text" name="add-task" id="add-task">
-                        <label for="add-task">Add tasks</label>
+                        <input type="text" name="add-task" id="add-task" placeholder="Please enter new task...">
                     </div>
                     <button type="submit" class="btn submit-btn" id="submit-btn">Add task</button>
                 </form>
@@ -26,10 +25,13 @@
         <div class="list-container">
             <h2>Tasks:</h2>
             <div class="filter-container">
-                <input type="text" name="filter" id="filter">
-                <label for="filter">Filter tasks</label>
+                <input type="text" name="filter" id="filter" placeholder="Please enter filter value...">
+                <label for="filter">Tasks filter</label>
             </div>
-            <ul class="task-list" id="task-list"></ul>
+            <ul class="task-list" id="task-list">
+                <!-- <li class="list-item">Learn React</li>
+                <li class="list-item">Learn Bootstrap</li> -->
+            </ul>
             <button class="btn clear-btn" id="clear-btn">Clear list</button>
         </div>
     </div>
