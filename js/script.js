@@ -29,6 +29,23 @@ const addItem = (e) => {
     clearInput();
 };
 
+// Delete item
+const deleteItem = (e) => {
+    if (e.target.classList.contains('delete-item')) {
+        e.target.parentElement.remove();
+    };
+};
+
+// Clear list
+const clearList = () => {
+    while (taskList.firstChild) {
+        taskList.firstChild.remove();
+    };
+};
 
 // Add event listeners
 addForm.addEventListener('submit', addItem);
+
+taskList.addEventListener('click', deleteItem);
+
+clearBtn.addEventListener('click', clearList);
